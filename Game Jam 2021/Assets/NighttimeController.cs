@@ -33,7 +33,7 @@ public class NighttimeController : MonoBehaviour
                 visionFadeTracker = 0.0f;
             }
 
-            start += 1 * Time.deltaTime; // tracks time
+            start += Time.deltaTime; // tracks time
             if (start >= fadeTime)
             {
                 RenderSettings.skybox = nightMat;
@@ -50,7 +50,7 @@ public class NighttimeController : MonoBehaviour
                     light.color = Color.Lerp(light.color, nightColor, visionFadeTracker);
                 }
 
-                visionFadeTracker += 1 * Time.deltaTime;
+                visionFadeTracker += Time.deltaTime;
             }
         }
     }
