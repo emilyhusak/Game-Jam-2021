@@ -23,6 +23,7 @@ namespace OculusSampleFramework
         GrabManager m_crosshairManager;
         Renderer m_renderer;
         MaterialPropertyBlock m_mpb;
+        public GameObject selectedCharacter;
 
 
         public bool InRange
@@ -66,7 +67,19 @@ namespace OculusSampleFramework
                 else if (!InRange) m_crosshair.SetState(GrabbableCrosshair.CrosshairState.Disabled);
                 else m_crosshair.SetState(Targeted ? GrabbableCrosshair.CrosshairState.Targeted : GrabbableCrosshair.CrosshairState.Enabled);
             }
-            if (m_materialColorField != null)
+
+            if (!m_crosshair)
+            {
+                if (isGrabbed)
+                {
+                    Debug.Log("grabbed");
+                    selectedCharacter.SetActive(false);
+                }
+                    
+            }
+
+
+                    if (m_materialColorField != null)
             {
                 m_renderer.GetPropertyBlock(m_mpb);
                 if (isGrabbed || !InRange) m_mpb.SetColor(m_materialColorField, m_crosshairManager.OutlineColorOutOfRange);

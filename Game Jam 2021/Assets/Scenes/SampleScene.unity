@@ -1956,6 +1956,11 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114089168713625662, guid: 0f51a6c91c2722e4b992f30ef1a244f3,
+        type: 3}
+      propertyPath: selectedCharacter
+      value: 
+      objectReference: {fileID: 1938030191}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f51a6c91c2722e4b992f30ef1a244f3, type: 3}
 --- !u!1 &889687837
@@ -2651,6 +2656,7 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
   m_materialColorField: 
+  selectedCharacter: {fileID: 0}
 --- !u!1 &1818627667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,7 +2807,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938030191}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d0b9cbd3db142646b180d20d49625c4, type: 3}
   m_Name: 
