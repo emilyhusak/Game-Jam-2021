@@ -18,6 +18,10 @@ public class SimpleCapsuleWithStickMovement : MonoBehaviour
 
 	public event Action CameraUpdated;
 	public event Action PreCharacterMove;
+	public GameObject bird, cat, turtle;
+	private Bird birdCharacter;
+	private Cat catCharacter;
+	private Turtle turtleCharacter;
 
 	private void Awake()
 	{
@@ -27,9 +31,25 @@ public class SimpleCapsuleWithStickMovement : MonoBehaviour
 
 	void Start ()
 	{
-		
+		birdCharacter = new Bird();
 	}
-	
+
+	void Update()
+	{
+		if (!bird.active)
+		{
+			Speed = birdCharacter.Speed;
+		}
+		else if (!cat.active)
+		{
+			Speed = catCharacter.Speed;
+		}
+		else if (!turtle.active)
+		{
+			Speed = turtleCharacter.Speed;
+		}
+	}
+
 	private void FixedUpdate()
 	{
         if (CameraUpdated != null) CameraUpdated();
