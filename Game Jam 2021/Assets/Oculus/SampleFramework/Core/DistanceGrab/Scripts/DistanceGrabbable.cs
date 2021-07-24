@@ -74,16 +74,20 @@ namespace OculusSampleFramework
             {
                 if (isGrabbed)
                 {
-                    Debug.Log("grabbed");
                     // Sets player's current animal and deactivates current animal
                     SimpleCapsuleWithStickMovement.animal = selectedCharacter;
 
                     foreach (GameObject animal in animals)
                     {
                         animal.SetActive(true);
+
+                        if (animal.tag == "Friend")
+                        {
+                            animal.GetComponent<Follow>().enabled = true;
+                        }
                     }
 
-                    //selectedCharacter.gameObject.tag = "Friend";
+                    selectedCharacter.gameObject.tag = "Friend";
                     selectedCharacter.SetActive(false);
                 }
                     
