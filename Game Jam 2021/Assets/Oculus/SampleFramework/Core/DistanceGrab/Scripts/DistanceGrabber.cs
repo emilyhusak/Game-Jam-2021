@@ -151,6 +151,7 @@ namespace OculusSampleFramework
                 m_grabbedObj.GrabBegin(this, closestGrabbableCollider);
                 SetPlayerIgnoreCollision(m_grabbedObj.gameObject, true);
 
+                /*
                 m_movingObjectToHand = true;
                 m_lastPos = transform.position;
                 m_lastRot = transform.rotation;
@@ -183,6 +184,7 @@ namespace OculusSampleFramework
                         m_grabbedObjectRotOff = m_grabbedObj.snapOffset.rotation * m_grabbedObjectRotOff;
                     }
                 }
+                */
 
             }
         }

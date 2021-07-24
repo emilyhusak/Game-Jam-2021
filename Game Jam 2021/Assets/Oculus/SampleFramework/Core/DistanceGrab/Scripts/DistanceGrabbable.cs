@@ -24,6 +24,7 @@ namespace OculusSampleFramework
         Renderer m_renderer;
         MaterialPropertyBlock m_mpb;
         public GameObject selectedCharacter;
+        private GameObject[] animals;
 
 
         public bool InRange
@@ -57,6 +58,7 @@ namespace OculusSampleFramework
             m_mpb = new MaterialPropertyBlock();
             RefreshCrosshair();
             m_renderer.SetPropertyBlock(m_mpb);
+            animals = GameObject.FindGameObjectsWithTag("Animal");
         }
 
         void RefreshCrosshair()
@@ -73,6 +75,15 @@ namespace OculusSampleFramework
                 if (isGrabbed)
                 {
                     Debug.Log("grabbed");
+                    // Sets player's current animal and deactivates current animal
+                    SimpleCapsuleWithStickMovement.animal = selectedCharacter;
+
+                    foreach (GameObject animal in animals)
+                    {
+                        animal.SetActive(true);
+                    }
+
+                    //selectedCharacter.gameObject.tag = "Friend";
                     selectedCharacter.SetActive(false);
                 }
                     

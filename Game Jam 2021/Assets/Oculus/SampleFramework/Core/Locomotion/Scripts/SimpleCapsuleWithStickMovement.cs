@@ -18,6 +18,8 @@ public class SimpleCapsuleWithStickMovement : MonoBehaviour
 
 	public event Action CameraUpdated;
 	public event Action PreCharacterMove;
+
+	public static GameObject animal;
 	public GameObject bird, cat, turtle;
 	private Bird birdCharacter;
 	private Cat catCharacter;
@@ -31,22 +33,32 @@ public class SimpleCapsuleWithStickMovement : MonoBehaviour
 
 	void Start ()
 	{
+		animal = null;
 		birdCharacter = new Bird();
+		catCharacter = new Cat();
+		turtleCharacter = new Turtle();
 	}
 
 	void Update()
 	{
-		if (!bird.active)
-		{
-			Speed = birdCharacter.Speed;
-		}
-		else if (!cat.active)
-		{
-			Speed = catCharacter.Speed;
-		}
-		else if (!turtle.active)
-		{
-			Speed = turtleCharacter.Speed;
+		if (!(animal is null))
+        {
+			// Sets speed if animal has been selected
+			if (animal.name.Equals("bird"))
+			{
+				Speed = birdCharacter.Speed;
+				Debug.Log("BIRD");
+			}
+			else if (animal.name.Equals("cat"))
+			{
+				Speed = catCharacter.Speed;
+				Debug.Log("CAT");
+			}
+			else if (animal.name.Equals("turtle"))
+			{
+				Speed = turtleCharacter.Speed;
+				Debug.Log("TURTLE");
+			}
 		}
 	}
 
