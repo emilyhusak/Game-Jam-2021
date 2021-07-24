@@ -74,8 +74,9 @@ namespace OculusSampleFramework
             {
                 if (isGrabbed)
                 {
-                    // Sets player's current animal and deactivates current animal
+                    // Sets player's current animal
                     SimpleCapsuleWithStickMovement.animal = selectedCharacter;
+                    NighttimeController.visionFadeTracker = 0.0f;
 
                     foreach (GameObject animal in animals)
                     {

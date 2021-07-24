@@ -7,7 +7,6 @@ public class Bird : MonoBehaviour
     private float speed;
     private string ability;
     
-
     public Bird()
     {
         speed = 5.0f;

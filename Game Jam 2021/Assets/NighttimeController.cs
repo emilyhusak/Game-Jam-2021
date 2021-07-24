@@ -8,6 +8,10 @@ public class NighttimeController : MonoBehaviour
     public Light light;
     private bool night;
     private float start = 0.0f;
+    private Color nightColor = Color.grey;
+    private Color catVisionColor;
+    private float fadeTime = 3.0f;
+    public static float visionFadeTracker = 3.0f;
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("triggered");
@@ -16,18 +20,37 @@ public class NighttimeController : MonoBehaviour
 
     private void Start()
     {
-
+        catVisionColor = light.color;
     }
 
     private void Update()
     {
+        // Changes skybox
         if (night)
         {
-            light.color -= (Color.white / 3.0f) * Time.deltaTime;
+            if (start == 0.0f && visionFadeTracker != 0.0f) // Starts tracking vision fade transition
+            {
+                visionFadeTracker = 0.0f;
+            }
+
             start += 1 * Time.deltaTime; // tracks time
-            if (start >= 3.0f)
+            if (start >= fadeTime)
             {
                 RenderSettings.skybox = nightMat;
+            }
+
+            if (visionFadeTracker < fadeTime)
+            {
+                if (!(SimpleCapsuleWithStickMovement.animal is null) && SimpleCapsuleWithStickMovement.animal.name.Equals("cat"))
+                {
+                    light.color = Color.Lerp(light.color, catVisionColor, visionFadeTracker);
+                }
+                else
+                {
+                    light.color = Color.Lerp(light.color, nightColor, visionFadeTracker);
+                }
+
+                visionFadeTracker += 1 * Time.deltaTime;
             }
         }
     }
