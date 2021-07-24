@@ -79,7 +79,7 @@ namespace OculusSampleFramework
             }
 
 
-                    if (m_materialColorField != null)
+            if (m_materialColorField != null)
             {
                 m_renderer.GetPropertyBlock(m_mpb);
                 if (isGrabbed || !InRange) m_mpb.SetColor(m_materialColorField, m_crosshairManager.OutlineColorOutOfRange);

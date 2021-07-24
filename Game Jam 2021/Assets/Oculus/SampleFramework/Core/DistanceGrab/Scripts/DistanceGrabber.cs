@@ -189,6 +189,7 @@ namespace OculusSampleFramework
 
         protected override void MoveGrabbedObject(Vector3 pos, Quaternion rot, bool forceTeleport = false)
         {
+            /*
             if (m_grabbedObj == null)
             {
                 return;
@@ -214,7 +215,7 @@ namespace OculusSampleFramework
                 }
             }
             grabbedRigidbody.MovePosition(grabbablePosition);
-            grabbedRigidbody.MoveRotation(grabbableRotation);
+            grabbedRigidbody.MoveRotation(grabbableRotation);*/
         }
 
         static private DistanceGrabbable HitInfoToGrabbable(RaycastHit hitInfo)
