@@ -10,6 +10,6 @@ public class Follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        follower.transform.position = toFollow.transform.position - dist;
+        follower.transform.position = toFollow.transform.position + dist;
     }
 }

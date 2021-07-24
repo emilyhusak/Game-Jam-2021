@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toFollow: {fileID: 423688198}
   follower: {fileID: 59399393}
-  dist: {x: 0, y: 0, z: 2}
+  dist: {x: -2, y: 0, z: 1}
 --- !u!1001 &135611774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1123,7 +1123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014206426448, guid: 0f51a6c91c2722e4b992f30ef1a244f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.66
+      value: 0.864
       objectReference: {fileID: 0}
     - target: {fileID: 4000014206426448, guid: 0f51a6c91c2722e4b992f30ef1a244f3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1163,15 +1163,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014206426448, guid: 0f51a6c91c2722e4b992f30ef1a244f3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.026967
+      value: 1.9770056
       objectReference: {fileID: 0}
     - target: {fileID: 4000014206426448, guid: 0f51a6c91c2722e4b992f30ef1a244f3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.0269656
+      value: 1.977005
       objectReference: {fileID: 0}
     - target: {fileID: 4000014206426448, guid: 0f51a6c91c2722e4b992f30ef1a244f3, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5.026967
+      value: 1.9770056
       objectReference: {fileID: 0}
     - target: {fileID: 33000010949262612, guid: 0f51a6c91c2722e4b992f30ef1a244f3,
         type: 3}
@@ -1808,7 +1808,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774147604}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d0b9cbd3db142646b180d20d49625c4, type: 3}
   m_Name: 
@@ -2866,14 +2866,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938030191}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d0b9cbd3db142646b180d20d49625c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toFollow: {fileID: 423688198}
   follower: {fileID: 1938030191}
-  dist: {x: 2, y: 0, z: 0}
+  dist: {x: 2, y: 0, z: 1}
 --- !u!1 &1991866589
 GameObject:
   m_ObjectHideFlags: 0
